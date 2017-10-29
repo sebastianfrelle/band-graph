@@ -20,9 +20,17 @@ export class Map {
  * connected to other Nodes via Vertices.
  */
 export class Node {
-  constructor(title, vertices) {
+  static create(...titles) {
+    let nodes = {};
+    for (let t of titles) {
+      nodes[t] = new Node(t);
+    }
+
+    return nodes;
+  }
+
+  constructor(title) {
     this.title = title;
-    this.vertices = vertices;
   }
 
   get neighbors() {

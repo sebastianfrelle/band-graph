@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "build": "babel src -d lib",
-    "test": "mocha --compilers js:babel/register"
+    "test": "jest"
   },
   "description": "Represent bands (and potentially other things) as a directed graph",
   "main": "index.js",
@@ -12,7 +12,8 @@
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-jest": "^21.2.0",
     "babel-preset-env": "^1.6.1",
-    "mocha": "^4.0.1"
+    "jest": "^21.2.1"
   }
 }
